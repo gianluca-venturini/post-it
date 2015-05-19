@@ -1,0 +1,44 @@
+.post-it-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.square {
+  display: flex;
+  width: 180px;
+  height: 180px;
+  margin: 40px!important;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.post-it {
+  background: #2d8ccb!important;
+  word-wrap: break-word;
+  flex-direction: column;
+}
+
+.content {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.author {
+  align-self: flex-end;
+}
+
+.center {
+  display: flex;
+  margin: auto;
+}
+
+textarea {
+  border: none;
+  background: none;
+}
+
+body {
+  margin: 0;
+}

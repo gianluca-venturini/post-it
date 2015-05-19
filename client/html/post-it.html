@@ -1,0 +1,48 @@
+<head>
+    <title>post-it</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+
+</head>
+
+<body>
+  <div class="post-it-container">
+      {{#each post_its}}
+        {{> post_it}}
+      {{/each}}
+
+
+      {{#unless new_post_it_rendered}}
+          {{> add_post_it}}
+      {{/unless}}
+
+      {{#if new_post_it_rendered}}
+          {{> new_post_it}}
+      {{/if}}
+  </div>
+</body>
+
+
+<template name="post_it">
+    <div class="card post-it square">
+        <div class="content"><p>{{content}}</p></div>
+        <div class="author"><p><i>{{author}}</i></p></div>
+    </div>
+</template>
+
+<template name="new_post_it">
+    <div class="post-it card square">
+        <div>
+            <form name="post-it-form">
+                <div>
+                    <textarea columns="1" md-maxlength="150"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
+
+<template name="add_post_it">
+    <div class="square">
+        <a class="btn-floating btn-large waves-effect waves-light red center"><i class="mdi-content-add"></i></a>
+    </div>
+</template>
